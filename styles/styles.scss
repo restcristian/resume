@@ -1,0 +1,164 @@
+@import 'reset';
+@import 'colors';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: $color-primary;
+}
+
+.wrapper {
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.heading-title {
+  text-transform: uppercase;
+  color: $color-secondary;
+  font-weight: bold;
+  &--large {
+    font-size: 24px;
+  }
+  &--medium {
+    font-size: 22px;
+  }
+  &--small {
+    font-size: 18px;
+    color: $color-primary;
+    text-transform: initial;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $color-secondary;
+  span {
+    color: $color-primary;
+  }
+  .material-icons {
+    + span {
+      padding-left: 6px;
+    }
+  }
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.list {
+  li {
+    list-style: none;
+    padding: 6px 0;
+    &:before {
+      content: '-';
+      color: $color-secondary;
+      padding-right: 6px;
+      font-weight: bold;
+    }
+  }
+}
+
+.badget {
+  border: 1px solid $color-secondary;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.header {
+  &__top {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    .heading-title {
+      padding-bottom: 6px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
+  }
+  &__links-item {
+    display: flex;
+    align-items: center;
+
+    .link {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.icon {
+  padding-right: 5px;
+  display: inline-block;
+  font-size: 23px;
+}
+
+.content {
+  display: flex;
+
+  &__col {
+    width: 50%;
+    padding: 12px;
+  }
+  .heading-title--medium {
+    padding-bottom: 12px;
+  }
+  &__job,
+  &__school,
+  &__project {
+    padding-bottom: 12px;
+  }
+  &__company {
+    display: flex;
+    align-items: center;
+    span {
+      padding-right: 12px;
+      font-size: 19px;
+    }
+  }
+  &__place-date {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: $color-gray;
+  }
+}
+
+.project {
+  &__title {
+    display: flex;
+    align-items: center;
+    span {
+      padding-right: 12px;
+    }
+  }
+}
+
+.skill {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  &__list--item {
+    margin: 12px 12px 0 0;
+  }
+}
+
+.language {
+  &__profic {
+    font-style: italic;
+    color: $color-gray;
+  }
+}
